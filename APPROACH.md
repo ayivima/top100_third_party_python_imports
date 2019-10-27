@@ -1,10 +1,4 @@
 
-
-# TOP 50 THIRD-PARTY LIBRARIES
-
-
-
-
 # APPROACH
 
 <h4>Approach To Accessing Python Files</h4>
@@ -15,10 +9,12 @@ The github API provides a 'contents' endpoint that returns a json file with info
 
 Using the requests library, python files were read programmatically, and a list of imported libraries obtained using regular expressions. This was compared with the standard library list obtained by scraping https://docs.python.org/3/library/ and
   https://docs.python.org/2.7/library/, to filter third-party libraries. Scraping was performed using the custom script, 'scrape_pystdlib.py'.
+<img src="https://raw.githubusercontent.com/ayivima/top100_third_party_python_imports/master/img/sample_statistics_screen.png" alt="Sample Statistic Screen">
+
 
 The only challenge with the API was the limit on the number of requests in an hour. Without authentication, this was a meagre 60 requests. Authenticated requests were better at a limit of 5000, even though continued requests after the limit was reached, and before a designated reset time, would incur a ban.
 
-<img src="https://github.com/ayivima/python_trends/blob/master/imgs/sample_screen1.png" alt="Sample Program Screen">
+<img src="https://raw.githubusercontent.com/ayivima/top100_third_party_python_imports/master/img/sample_screen1%20(1).png" alt="Sample Program Screen">
 
 These barriers were overcome by a number of strategies including:
 - Using authenticated requests
@@ -28,4 +24,4 @@ Given the huge workload, it was paramount to use multiple instances running conc
 
 Problematic repositories were skipped.
 
-<img src="https://github.com/ayivima/python_trends/blob/master/imgs/sample_error_screen2.png" alt="Sample Error Screen">
+<img src="https://raw.githubusercontent.com/ayivima/top100_third_party_python_imports/master/img/sample_error_screen2.png" alt="Sample Error Screen">
