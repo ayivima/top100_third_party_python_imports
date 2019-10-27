@@ -1,6 +1,8 @@
 
 # APPROACH
 
+100,000 repositories were accessed for python scripts, and their library imports were analysed.
+
 <h4>Approach To Accessing Python Files</h4>
 
 The github API was used for grabbing only python files in each repo for analysis. As opposed to cloning each repo locally, this approach cut down on bandwidth and the time to download and go through tons of repo files that were irrelevant to the cause - some repositories can be large.
@@ -9,8 +11,9 @@ The github API provides a 'contents' endpoint that returns a json file with info
 
 Using the requests library, python files were read programmatically, and a list of imported libraries obtained using regular expressions. This was compared with the standard library list obtained by scraping https://docs.python.org/3/library/ and
   https://docs.python.org/2.7/library/, to filter third-party libraries. Scraping was performed using the custom script, 'scrape_pystdlib.py'.
-<img src="https://raw.githubusercontent.com/ayivima/top100_third_party_python_imports/master/img/sample_statistics_screen.png" alt="Sample Statistic Screen">
 
+
+<img src="https://raw.githubusercontent.com/ayivima/top100_third_party_python_imports/master/img/sample_statistics_screen.png" alt="Sample Statistic Screen">
 
 The only challenge with the API was the limit on the number of requests in an hour. Without authentication, this was a meagre 60 requests. Authenticated requests were better at a limit of 5000, even though continued requests after the limit was reached, and before a designated reset time, would incur a ban.
 
@@ -20,7 +23,7 @@ These barriers were overcome by a number of strategies including:
 - Using authenticated requests
 - Script automatically pausing when a check limit of 4900 requests was passed, and resuming after reset time had passed. 
 
-Given the huge workload, it was paramount to use multiple instances running concurrently. Five t2.micro instances were used, and a custom load balancing script was implemented to allocate jobs, monitor progress, and recovery from process termination.
+Given the huge workload, it was paramount to use multiple instances running concurrently. Five t2.micro instances were used, and a custom load balancing script was implemented to allocate jobs, monitor progress, and recover safely from process termination.
 
 Problematic repositories were skipped.
 
