@@ -1,5 +1,15 @@
-# TOP 100 PYTHON THIRD PARTY LIBRARY IMPORTS
+# TOP PYTHON THIRD PARTY LIBRARY IMPORTS
 
-This is one part of a series of explorations of python usage patterns. This exploration was conducted on 100,000 github repositories containing python files, and which were accessed using github API, custom scripts for code analysis, and t2.micro instances.
+Based on analysis of 100,000 python repositories. Code analysis was performed on the go using custom scripts, github API, and t2.micro instances
 
-<img src="https://raw.githubusercontent.com/ayivima/top100_third_party_python_imports/master/img/python_lib_use.png" alt="Sample Statistic Screen">
+# TOP 10 IMPORTS DOMINATED BY LIBRARIES FOR SCIENTIFIC COMPUTING AND WEB DEVELOPMENT
+
+<img src="https://raw.githubusercontent.com/ayivima/top100_third_party_python_imports/master/img/python_lib_use_10.png" alt="Top 10 imports">
+
+# TOP 20 IMPORTS DOMINATED BY LIBRARIES FOR SCIENTIFIC COMPUTING, WEB DEVELOPMENT & UTILITY TOOLS
+
+<img src="https://raw.githubusercontent.com/ayivima/top100_third_party_python_imports/master/img/python_lib_use_20.png" alt="Top 20 imports">
+
+# TOP 100 IMPORTS 
+
+<img src="https://raw.githubusercontent.com/ayivima/top100_third_party_python_imports/master/img/python_lib_use.png" alt="Top 20 imports">
