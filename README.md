@@ -14,4 +14,4 @@ In the past, most studies have used package download data from pypi and related 
 
 # TOP 100 IMPORTS 
 
-<img src="https://raw.githubusercontent.com/ayivima/top100_third_party_python_imports/master/img/python_lib_use.png" alt="Top 20 imports">
+<img src="https://raw.githubusercontent.com/ayivima/top100_third_party_python_imports/master/img/python_lib_use_100c.png" alt="Top 20 imports">
